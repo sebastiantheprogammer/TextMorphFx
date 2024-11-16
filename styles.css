@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.input-section {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+}
+
+.button-container, .control-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: black; /* Dot color */
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #fff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.font-container {
+    display: flex;
+    align-items: center;
+}
+
+.font-container label {
+    margin-right: 10px;
+}
+
+#fontSelector {
+    padding: 5px;
+    border: 1px solid #fff;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.speed-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#speedSlider {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#speedValue {
+    min-width: 30px;
+    text-align: center;
+}
+
+.drop-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.drop-area {
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.drop-area:hover {
+    background-color: #333;
+}
+
+.drop-text {
+    color: #aaa;
+}
+
+.output-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.text-container {
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.revealing-text {
+    padding-right: 5px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    animation: glitch-typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.no-cursor .revealing-text {
+    border-right: none;
+}
+
+@keyframes glitch-typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.footer .heart {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.revealing-text {
+    padding-right: 5px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    animation: glitch-typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.footer .heart {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-button img {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.icon-button:hover img {
+    transform: scale(1.2);
+    filter: invert(29%) sepia(96%) saturate(747%) hue-rotate(200deg) brightness(95%) contrast(91%);
+}
+.icon-button img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.icon-button:hover img {
+    transform: scale(1.2);
+    filter: invert(29%) sepia(96%) saturate(747%) hue-rotate(200deg) brightness(95%) contrast(91%);
+}

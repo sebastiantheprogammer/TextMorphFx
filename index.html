@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Reveal Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">\
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1> TextMorphFX</h1>
+    </header>
+    <main class="main-content">
+        <section class="input-section">
+            <textarea id="textInput" placeholder="Enter your text here..."></textarea>
+            <div class="button-container">
+                <button id="previewButton">Preview</button>
+                <button id="downloadButton">Download as GIF</button>
+                <button id="copyButton">Copy Code</button>
+            </div>
+            <div class="control-container">
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" id="toggleCursor" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span>Toggle Cursor</span>
+                </div>
+                <div class="font-container">
+                    <label for="fontSelector">Select Font:</label>
+                    <select id="fontSelector">
+                        <option value="Playfair Display">Playfair Display</option>
+                        <option value="Roboto">Roboto</option>
+                    </select>
+                </div>
+                <div class="speed-container">
+                    <label for="speedSlider">Speed: </label>
+                    <input type="range" id="speedSlider" min="10" max="200" value="50">
+                    <span id="speedValue">50</span> ms
+                </div>
+            </div>
+            <div class="drop-container">
+                <p>Drag & Drop Your Font File Here</p>
+                <div id="dropArea" class="drop-area">
+                    <span class="drop-text">Drop your font file here (.woff2, .woff, .ttf, .otf)</span>
+                </div>
+            </div>
+        </section>
+        <section class="output-section">
+            <div class="text-container">
+                <span id="outputText" class="revealing-text"></span>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+    <footer class="footer">
+        Made By Sebastian Ingram And <span id="heart" class="heart">❤️</span>
+        <div class="social-icons">
+            <a id="github" class="icon-button" href="https://github.com/sebastiantheprogammer" target="_blank">
+                <img src="brand-github.svg" alt="GitHub">
+            </a>
+            <a id="instagram" class="icon-button" href="https://www.instagram.com/sebastian_007._/" target="_blank">
+                <img src="brand-instagram.svg" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+        
+</body>
+</html>
